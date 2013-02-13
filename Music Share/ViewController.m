@@ -31,6 +31,7 @@
     NSString *player;
     NSString *title;
     NSString *album;
+    UIImage *artwork;
     if([mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyAlbumTitle] == nil){
         album = @"null";
     }else{
@@ -46,6 +47,14 @@
     }else{
         player = [mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtist];
     }
+    if([mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtwork] != nil){
+        CGSize size = {
+            100.0,100.0
+        };
+        artwork = [[mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtwork] imageWithSize:size];
+    }else{
+        artwork = nil;
+    }
     NSMutableString *string = [NSMutableString stringWithCapacity:140];
     [string appendString: @"我用@纸飞机音乐分享 （for iOS）分享了"];
     [string appendString:player];
@@ -54,8 +63,12 @@
     [string appendString:@"来自专辑"];
     [string appendString:album];
     
-    NSArray *activityItems;  
-    activityItems = [NSArray arrayWithObject:string];
+    NSArray *activityItems;
+    if (artwork != nil){
+        activityItems = [NSArray arrayWithObjects:string,artwork,nil];
+    }else{
+        activityItems = [NSArray arrayWithObject:string]; 
+    }
     UIActivityViewController *activityController =
     [[UIActivityViewController alloc] initWithActivityItems:activityItems  applicationActivities:nil];    
     [self presentViewController:activityController  animated:YES completion:nil];
