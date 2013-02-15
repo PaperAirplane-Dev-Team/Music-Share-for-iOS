@@ -47,11 +47,11 @@
                             <constraint firstItem="7vD-fk-tPL" firstAttribute="centerX" secondItem="07h-ZI-nN0" secondAttribute="centerX" type="default" id="87L-0W-iB9"/>
                             <constraint firstItem="7vD-fk-tPL" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="9HV-Ga-lyU"/>
                             <constraint firstItem="07h-ZI-nN0" firstAttribute="centerX" secondItem="v7e-4a-XWF" secondAttribute="centerX" type="default" id="DeH-w4-5w2"/>
-                            <constraint firstItem="7vD-fk-tPL" firstAttribute="centerX" secondItem="azs-Xg-5l2" secondAttribute="centerX" type="default" id="HYW-iN-ozh"/>
                             <constraint firstItem="azs-Xg-5l2" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="I47-1H-cmN"/>
-                            <constraint firstItem="07h-ZI-nN0" firstAttribute="top" secondItem="v7e-4a-XWF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WH2-Yy-5PS"/>
-                            <constraint firstItem="v7e-4a-XWF" firstAttribute="top" secondItem="3" secondAttribute="top" constant="92" id="jiq-pM-Y19"/>
-                            <constraint firstItem="7vD-fk-tPL" firstAttribute="top" secondItem="07h-ZI-nN0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wxY-YL-UVd"/>
+                            <constraint firstItem="azs-Xg-5l2" firstAttribute="centerX" secondItem="7vD-fk-tPL" secondAttribute="centerX" type="default" id="Tfb-bR-rsD"/>
+                            <constraint firstItem="v7e-4a-XWF" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="lLy-2s-Tj6"/>
+                            <constraint firstItem="7vD-fk-tPL" firstAttribute="top" secondItem="07h-ZI-nN0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vKy-xf-08f"/>
+                            <constraint firstItem="07h-ZI-nN0" firstAttribute="top" secondItem="v7e-4a-XWF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wdi-Ak-gCg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -68,6 +68,8 @@
             <relationships>
                 <relationship kind="action" name="sb_pressed:"/>
                 <relationship kind="outlet" name="btn_share" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nowPlaying" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="status" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

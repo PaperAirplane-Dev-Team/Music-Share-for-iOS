@@ -43,14 +43,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oeA-kg-Ksg" firstAttribute="centerX" secondItem="kpP-qO-OQF" secondAttribute="centerX" type="default" id="8cG-Q3-fXA"/>
-                            <constraint firstItem="DGx-G5-zuc" firstAttribute="centerX" secondItem="50Z-rL-c2Z" secondAttribute="centerX" type="default" id="F94-eR-29v"/>
+                            <constraint firstItem="kpP-qO-OQF" firstAttribute="top" secondItem="oeA-kg-Ksg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="B0H-YQ-ucI"/>
+                            <constraint firstItem="oeA-kg-Ksg" firstAttribute="top" secondItem="DGx-G5-zuc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="E8O-Uz-nKm"/>
                             <constraint firstItem="gPB-bb-XrC" firstAttribute="top" secondItem="50Z-rL-c2Z" secondAttribute="top" constant="252" id="GiS-OS-bbu"/>
-                            <constraint firstItem="oeA-kg-Ksg" firstAttribute="top" secondItem="DGx-G5-zuc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pkl-6F-jUP"/>
-                            <constraint firstItem="kpP-qO-OQF" firstAttribute="centerX" secondItem="gPB-bb-XrC" secondAttribute="centerX" type="default" id="T91-y2-D3W"/>
-                            <constraint firstItem="kpP-qO-OQF" firstAttribute="top" secondItem="oeA-kg-Ksg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nvu-kp-9Ma"/>
+                            <constraint firstItem="gPB-bb-XrC" firstAttribute="centerX" secondItem="kpP-qO-OQF" secondAttribute="centerX" type="default" id="Usa-xY-yth"/>
+                            <constraint firstItem="DGx-G5-zuc" firstAttribute="top" secondItem="50Z-rL-c2Z" secondAttribute="top" constant="20" symbolic="YES" type="default" id="aZ3-ej-1T3"/>
+                            <constraint firstItem="DGx-G5-zuc" firstAttribute="centerX" secondItem="50Z-rL-c2Z" secondAttribute="centerX" type="default" id="qVR-YL-tIq"/>
                             <constraint firstItem="DGx-G5-zuc" firstAttribute="centerX" secondItem="oeA-kg-Ksg" secondAttribute="centerX" type="default" id="rG4-jW-Qcz"/>
-                            <constraint firstItem="DGx-G5-zuc" firstAttribute="top" secondItem="50Z-rL-c2Z" secondAttribute="top" constant="92" id="xrn-5H-W7K"/>
+                            <constraint firstItem="kpP-qO-OQF" firstAttribute="centerX" secondItem="oeA-kg-Ksg" secondAttribute="centerX" type="default" id="y2g-AP-zQd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -67,6 +67,8 @@
             <relationships>
                 <relationship kind="action" name="sb_pressed:"/>
                 <relationship kind="outlet" name="btn_share" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nowPlaying" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="status" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

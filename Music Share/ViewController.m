@@ -32,6 +32,7 @@
     NSString *title;
     NSString *album;
     UIImage *artwork;
+    MPMediaItemArtwork *mpArtwork = [mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtwork];
     if([mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyAlbumTitle] == nil){
         album = @"null";
     }else{
@@ -47,11 +48,8 @@
     }else{
         player = [mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtist];
     }
-    if([mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtwork] != nil){
-        CGSize size = {
-            100.0,100.0
-        };
-        artwork = [[mpmpc.nowPlayingItem valueForProperty: MPMediaItemPropertyArtwork] imageWithSize:size];
+    if(mpArtwork != nil){
+        artwork = [mpArtwork imageWithSize: mpArtwork.bounds.size];
     }else{
         artwork = nil;
     }
